@@ -11,3 +11,6 @@
 
 - using a module (the -m flag) to run a command on all hosts:
 'ansible all -m gather_facts' (this shows the facts of all hosts)
+
+- to be ROOT USER:
+'ansible all -m apt -a "name=nginx state=latest" --become --ask-become-pass' (this installs nginx on all hosts, but first asks you the password to become root)
